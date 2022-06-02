@@ -1,0 +1,33 @@
+{{- $easi_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.easi.runenv "production") -}}
+{{- if $easi_autoscaling.enabled }}
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "wetv-gateway.fullname" . }}
+  labels:
+    {{- include "wetv-gateway.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "wetv-gateway.fullname" . }}
+  minReplicas: {{ $easi_autoscaling.minReplicas }}
+  maxReplicas: {{ $easi_autoscaling.maxReplicas }}
+  metrics:
+  {{- if $easi_autoscaling.targetCPUUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ $easi_autoscaling.targetCPUUtilizationPercentage }}
+  {{- end }}
+  {{- if $easi_autoscaling.targetMemoryUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: {{ $easi_autoscaling.targetMemoryUtilizationPercentage }}
+  {{- end }}
+{{- end }}
