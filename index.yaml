@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  wetv-gateway:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-02T07:58:53.747093797Z"
+    description: A Helm chart for Kubernetes
+    digest: e1e42ef74b0911efefcf47e080570b0c8b20899a66227c98e0fa60134332b534
+    name: wetv-gateway
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
+    version: 0.1.1
+generated: "2022-06-02T07:58:53.747107497Z"
