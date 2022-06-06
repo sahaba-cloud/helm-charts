@@ -1,5 +1,5 @@
-{{- $easi_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.easi.runenv "production") -}}
-{{- if $easi_autoscaling.enabled }}
+{{- $cmdb_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.cmdb.runenv "production") -}}
+{{- if $cmdb_autoscaling.enabled }}
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -11,23 +11,23 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: {{ include "wetv-gateway.fullname" . }}
-  minReplicas: {{ $easi_autoscaling.minReplicas }}
-  maxReplicas: {{ $easi_autoscaling.maxReplicas }}
+  minReplicas: {{ $cmdb_autoscaling.minReplicas }}
+  maxReplicas: {{ $cmdb_autoscaling.maxReplicas }}
   metrics:
-  {{- if $easi_autoscaling.targetCPUUtilizationPercentage }}
+  {{- if $cmdb_autoscaling.targetCPUUtilizationPercentage }}
     - type: Resource
       resource:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: {{ $easi_autoscaling.targetCPUUtilizationPercentage }}
+          averageUtilization: {{ $cmdb_autoscaling.targetCPUUtilizationPercentage }}
   {{- end }}
-  {{- if $easi_autoscaling.targetMemoryUtilizationPercentage }}
+  {{- if $cmdb_autoscaling.targetMemoryUtilizationPercentage }}
     - type: Resource
       resource:
         name: memory
         target:
           type: Utilization
-          averageUtilization: {{ $easi_autoscaling.targetMemoryUtilizationPercentage }}
+          averageUtilization: {{ $cmdb_autoscaling.targetMemoryUtilizationPercentage }}
   {{- end }}
 {{- end }}

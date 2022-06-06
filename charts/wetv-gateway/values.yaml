@@ -6,7 +6,7 @@ context:
     - amd64
     - arm64
 
-easi:
+cmdb:
   runenv: production
   serviceLevel: B
 

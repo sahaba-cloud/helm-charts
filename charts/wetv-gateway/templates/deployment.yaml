@@ -1,5 +1,5 @@
-{{- $easi_resources := ternary .Values.prodResources .Values.resources (eq .Values.easi.runenv "production") -}}
-{{- $easi_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.easi.runenv "production") -}}
+{{- $cmdb_resources := ternary .Values.prodResources .Values.resources (eq .Values.cmdb.runenv "production") -}}
+{{- $cmdb_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.cmdb.runenv "production") -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,7 +7,7 @@ metadata:
   labels:
     {{- include "wetv-gateway.labels" . | nindent 4 }}
 spec:
-{{- if not $easi_autoscaling.enabled }}
+{{- if not $cmdb_autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
@@ -29,11 +29,11 @@ spec:
       serviceAccountName: {{ include "wetv-gateway.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      {{- if eq .Values.easi.serviceLevel "S" }}
-      priorityClassName: easi-s
+      {{- if eq .Values.cmdb.serviceLevel "S" }}
+      priorityClassName: cmdb-s
       {{- end }}
-      {{- if eq .Values.easi.serviceLevel "A" }}
-      priorityClassName: easi-a
+      {{- if eq .Values.cmdb.serviceLevel "A" }}
+      priorityClassName: cmdb-a
       {{- end }}
       terminationGracePeriodSeconds: 45
       containers:
@@ -66,7 +66,7 @@ spec:
             initialDelaySeconds: 15
             periodSeconds: 20
           resources:
-            {{- toYaml $easi_resources | nindent 12 }}
+            {{- toYaml $cmdb_resources | nindent 12 }}
           volumeMounts:
 
       volumes:
