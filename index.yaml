@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  iam-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-07T02:55:14.770126346Z"
+    description: A Helm chart for Kubernetes
+    digest: 801b9de39a83e7a898db9b8ecfc1821bbf6b46aff3af9b5adeba662248e40b72
+    name: iam-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/iam-service-0.1.6/iam-service-0.1.6.tgz
+    version: 0.1.6
   wetv-gateway:
   - apiVersion: v2
     appVersion: latest
@@ -21,4 +32,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-06T06:47:28.912545487Z"
+generated: "2022-06-07T02:55:14.770136546Z"
