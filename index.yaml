@@ -1,5 +1,27 @@
 apiVersion: v1
 entries:
+  demo-devops:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-08T02:46:22.881756593Z"
+    description: A Helm chart for Kubernetes
+    digest: b282b12cb8434fd36daab95a16bf45bdf6e8ae0f4725055d0e3ae312c8c1f4e7
+    name: demo-devops
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/demo-devops-0.1.11/demo-devops-0.1.11.tgz
+    version: 0.1.11
+  demo-devops-arm:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-08T02:46:22.961991034Z"
+    description: A Helm chart for Kubernetes
+    digest: 34f40ea61911d0db9db4a3dd318ff6bd9eb9c3aa4967bce3c3f8b2b62fe2f2d4
+    name: demo-devops-arm
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/demo-devops-arm-0.1.8/demo-devops-arm-0.1.8.tgz
+    version: 0.1.8
   iam-service:
   - apiVersion: v2
     appVersion: latest
@@ -42,4 +64,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-07T03:00:55.820797393Z"
+generated: "2022-06-08T02:46:22.962004934Z"
