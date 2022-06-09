@@ -3,16 +3,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "common-service.fullname" . }}
+  name: {{ include "common-business.fullname" . }}
   labels:
-    {{- include "common-service.labels" . | nindent 4 }}
+    {{- include "common-business.labels" . | nindent 4 }}
 spec:
 {{- if not $cmdb_autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "common-service.selectorLabels" . | nindent 6 }}
+      {{- include "common-business.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -20,13 +20,13 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "common-service.selectorLabels" . | nindent 8 }}
+        {{- include "common-business.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "common-service.serviceAccountName" . }}
+      serviceAccountName: {{ include "common-business.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- if eq .Values.cmdb.serviceLevel "S" }}
@@ -58,15 +58,13 @@ spec:
           livenessProbe:
             tcpSocket:
               port: http
-            initialDelaySeconds: 30
-            periodSeconds: 20
-            failureThreshold: 6
+            initialDelaySeconds: 5
+            periodSeconds: 10
           readinessProbe:
             tcpSocket:
               port: http
-            initialDelaySeconds: 30
+            initialDelaySeconds: 15
             periodSeconds: 20
-            failureThreshold: 6
           resources:
             {{- toYaml $cmdb_resources | nindent 12 }}
           volumeMounts:

@@ -3,14 +3,14 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "common-service.fullname" . }}
+  name: {{ include "common-business.fullname" . }}
   labels:
-    {{- include "common-service.labels" . | nindent 4 }}
+    {{- include "common-business.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "common-service.fullname" . }}
+    name: {{ include "common-business.fullname" . }}
   minReplicas: {{ $cmdb_autoscaling.minReplicas }}
   maxReplicas: {{ $cmdb_autoscaling.maxReplicas }}
   metrics:

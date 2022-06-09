@@ -1,4 +1,4 @@
-# Default values for common-service.
+# Default values for common-business.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 context:
@@ -14,7 +14,7 @@ replicaCount: 1
 
 image:
   platform: independent
-  repository: 121875945917.dkr.ecr.ap-southeast-1.amazonaws.com/common/service
+  repository: 121875945917.dkr.ecr.ap-southeast-1.amazonaws.com/common/business
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
