@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  common-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-09T02:18:37.464621719Z"
+    description: A Helm chart for Kubernetes
+    digest: c97547ecee1ba85931224cf2f010604e72d5c36d596e1ebfadf7b9c21a7c6c5e
+    name: common-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/common-service-0.1.1/common-service-0.1.1.tgz
+    version: 0.1.1
   demo-devops:
   - apiVersion: v2
     appVersion: latest
@@ -64,4 +75,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-08T02:46:22.962004934Z"
+generated: "2022-06-09T02:18:37.464666419Z"
