@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "id-service.fullname" . }}
+  labels:
+    {{- include "id-service.labels" . | nindent 4 }}
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: {{ .Values.check.url }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "id-service.selectorLabels" . | nindent 4 }}

@@ -1,0 +1,33 @@
+{{- $cmdb_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.cmdb.runenv "production") -}}
+{{- if $cmdb_autoscaling.enabled }}
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "id-service.fullname" . }}
+  labels:
+    {{- include "id-service.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "id-service.fullname" . }}
+  minReplicas: {{ $cmdb_autoscaling.minReplicas }}
+  maxReplicas: {{ $cmdb_autoscaling.maxReplicas }}
+  metrics:
+  {{- if $cmdb_autoscaling.targetCPUUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ $cmdb_autoscaling.targetCPUUtilizationPercentage }}
+  {{- end }}
+  {{- if $cmdb_autoscaling.targetMemoryUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: {{ $cmdb_autoscaling.targetMemoryUtilizationPercentage }}
+  {{- end }}
+{{- end }}
