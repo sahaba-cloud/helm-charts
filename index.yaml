@@ -65,6 +65,50 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/iam-service-0.1.6/iam-service-0.1.6.tgz
     version: 0.1.6
+  id-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-10T02:03:00.131695718Z"
+    description: A Helm chart for Kubernetes
+    digest: c0456b5d773d44f9faf038d66d6a64628f3fb15811718d7bb9748a9536779a56
+    name: id-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/id-service-0.1.0/id-service-0.1.0.tgz
+    version: 0.1.0
+  message-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-10T02:03:00.234738298Z"
+    description: A Helm chart for Kubernetes
+    digest: dfe30d49afb6f711bf7ee5658bcbb17518a42291d9f27c38c7a12d374a1f45d3
+    name: message-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/message-service-0.1.0/message-service-0.1.0.tgz
+    version: 0.1.0
+  ordering-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-10T02:03:00.312777371Z"
+    description: A Helm chart for Kubernetes
+    digest: 90c94c7a85427253e372da008e4dc370ef51e35a23ef3f73920f015f6f844472
+    name: ordering-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/ordering-service-0.1.0/ordering-service-0.1.0.tgz
+    version: 0.1.0
+  user-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-10T02:03:00.408629034Z"
+    description: A Helm chart for Kubernetes
+    digest: 204eca666693256eecd29da4bb09803221621630b8f7c0afca832fbfec5b4175
+    name: user-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/user-service-0.1.0/user-service-0.1.0.tgz
+    version: 0.1.0
   wetv-gateway:
   - apiVersion: v2
     appVersion: latest
@@ -86,4 +130,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-09T08:01:05.748193431Z"
+generated: "2022-06-10T02:03:00.408641434Z"
