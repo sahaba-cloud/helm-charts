@@ -171,6 +171,16 @@ entries:
   message-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-14T06:23:27.50453959Z"
+    description: A Helm chart for Kubernetes
+    digest: b50c0003efd7482e0f2b8b1afe9f7e88b086998545007895212a8b8654efc0e7
+    name: message-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/message-service-0.1.1/message-service-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-10T02:03:00.234738298Z"
     description: A Helm chart for Kubernetes
     digest: dfe30d49afb6f711bf7ee5658bcbb17518a42291d9f27c38c7a12d374a1f45d3
@@ -263,4 +273,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-14T06:23:19.303784124Z"
+generated: "2022-06-14T06:23:27.50457689Z"
