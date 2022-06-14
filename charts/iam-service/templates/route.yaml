@@ -1,0 +1,17 @@
+apiVersion: apisix.apache.org/v2beta3
+kind: ApisixRoute
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    {{- include "iam-service.labels" . | nindent 4 }}
+spec:
+  http:
+    - name: main
+      match:
+        hosts:
+          - {{ .Release.Name }}.dev.cq
+        paths:
+          - /*
+      backends:
+        - serviceName: {{ include "iam-service.fullname" . }}
+          servicePort: {{ .Values.service.port }}
