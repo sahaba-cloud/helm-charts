@@ -3,7 +3,7 @@ kind: ApisixRoute
 metadata:
   name: {{ .Release.Name }}
   labels:
-    {{- include "search-service.labels" . | nindent 4 }}
+    {{- include "id-service.labels" . | nindent 4 }}
 spec:
   http:
     - name: main
@@ -13,5 +13,5 @@ spec:
         paths:
           - /*
       backends:
-        - serviceName: {{ include "search-service.fullname" . }}
+        - serviceName: {{ include "id-service.fullname" . }}
           servicePort: {{ .Values.service.port }}
