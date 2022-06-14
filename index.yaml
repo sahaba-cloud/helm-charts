@@ -89,6 +89,16 @@ entries:
   id-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-14T06:17:09.157670915Z"
+    description: A Helm chart for Kubernetes
+    digest: 44f1db2feaac0f318e3b4c78245d4befbf66b62b4c6824012fcf096dc5100475
+    name: id-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/id-service-0.1.3/id-service-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-14T06:14:23.337224884Z"
     description: A Helm chart for Kubernetes
     digest: 4debec51070277b78a3e64e088e9d5f362038ef596ef12a23f38b2dfdd88f6ee
@@ -192,4 +202,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-14T06:14:23.337246684Z"
+generated: "2022-06-14T06:17:09.157695616Z"
