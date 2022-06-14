@@ -32,6 +32,17 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/common-service-0.1.1/common-service-0.1.1.tgz
     version: 0.1.1
+  delivery-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-14T00:54:17.187012575Z"
+    description: A Helm chart for Kubernetes
+    digest: 95ea8749f10913bc42f3609b984e8c474c0f463ba1fd983cc7e99a6f8ff3c262
+    name: delivery-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/delivery-service-0.1.1/delivery-service-0.1.1.tgz
+    version: 0.1.1
   demo-devops:
   - apiVersion: v2
     appVersion: latest
@@ -140,4 +151,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-10T02:56:32.677280096Z"
+generated: "2022-06-14T00:54:17.187027577Z"
