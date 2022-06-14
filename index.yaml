@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  cmdb-api:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-14T06:22:31.19880759Z"
+    description: A Helm chart for Kubernetes
+    digest: 3bfb8469ee2232a0bae12ce27031f357a7c775cd7af683bcac8ceeec3aa41c0e
+    name: cmdb-api
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/cmdb-api-0.1.1/cmdb-api-0.1.1.tgz
+    version: 0.1.1
   common-business:
   - apiVersion: v2
     appVersion: latest
@@ -202,4 +213,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-14T06:17:09.157695616Z"
+generated: "2022-06-14T06:22:31.198845783Z"
