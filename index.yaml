@@ -273,6 +273,16 @@ entries:
   search-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-20T23:49:10.666697659Z"
+    description: A Helm chart for Kubernetes
+    digest: 4c527d5dcac128eef854f0539510207334db45c115fd7c234d5d7f7c46f1c7ee
+    name: search-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/search-service-0.1.4/search-service-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-14T06:23:36.985160945Z"
     description: A Helm chart for Kubernetes
     digest: 20b3ff7067cadb33f53351741a9d65f2be738cde5355133ed442b9adb0c05895
@@ -353,4 +363,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-20T23:49:06.408285431Z"
+generated: "2022-06-20T23:49:10.66676056Z"
