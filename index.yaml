@@ -212,6 +212,16 @@ entries:
   ordering-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-20T23:48:50.391210346Z"
+    description: A Helm chart for Kubernetes
+    digest: 6616763dfcf61e84f42fd81e9b1752b2fd9f142b0af7a083cd3d6c9a61c2bff8
+    name: ordering-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/ordering-service-0.1.2/ordering-service-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-14T06:22:55.913624429Z"
     description: A Helm chart for Kubernetes
     digest: 155843fc42f21ee0dad3a5e2595084a1d8843b8f928d6839712cd5810bccb064
@@ -303,4 +313,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-20T23:48:40.050984943Z"
+generated: "2022-06-20T23:48:50.391255047Z"
