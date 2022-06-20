@@ -14,6 +14,16 @@ entries:
   common-business:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-20T23:48:40.05094214Z"
+    description: A Helm chart for Kubernetes
+    digest: 44d403c02cd0b3fa96b04b0f0b6dab1a579a5109443bda42f2e5c3f7d6e3c5bf
+    name: common-business
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/common-business-0.1.3/common-business-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-14T06:22:48.481813101Z"
     description: A Helm chart for Kubernetes
     digest: 6d28e1dda39fa8675e189933950b8b8700189854642ea558b238c4918ae40f20
@@ -293,4 +303,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-20T23:48:37.39425248Z"
+generated: "2022-06-20T23:48:40.050984943Z"
