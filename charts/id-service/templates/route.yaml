@@ -9,7 +9,9 @@ spec:
     - name: main
       match:
         hosts:
-          - {{ .Release.Name }}.dev.cq
+          {{- range .Values.ingress.hosts }}
+          - {{ .host | quote }}
+          {{- end }}
         paths:
           - /*
       backends:
