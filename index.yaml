@@ -116,6 +116,17 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/demo-devops-arm-0.1.8/demo-devops-arm-0.1.8.tgz
     version: 0.1.8
+  gateway-nginx:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-21T03:14:45.672568123Z"
+    description: A Helm chart for Kubernetes
+    digest: b4f085d47cab1c5a172ba49107012113f85ff863eff9058ac05c13966cf525f1
+    name: gateway-nginx
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/gateway-nginx-0.1.2/gateway-nginx-0.1.2.tgz
+    version: 0.1.2
   iam-service:
   - apiVersion: v2
     appVersion: latest
@@ -363,4 +374,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-20T23:49:10.66676056Z"
+generated: "2022-06-21T03:14:45.672634824Z"
