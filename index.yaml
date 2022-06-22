@@ -336,6 +336,16 @@ entries:
   trade-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-22T08:08:46.672147077Z"
+    description: A Helm chart for Kubernetes
+    digest: d83b7bb088cb4c72fe064663899020b7aa1f5caac77bbe83171a3c5889ac2daf
+    name: trade-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/trade-service-0.1.2/trade-service-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-22T02:11:16.821980165Z"
     description: A Helm chart for Kubernetes
     digest: c609d5b72eae40a9e89f058ecffa542496ca80e6e366c4bb8cb4953428c17226
@@ -396,4 +406,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-22T06:59:12.637736792Z"
+generated: "2022-06-22T08:08:46.672194278Z"
