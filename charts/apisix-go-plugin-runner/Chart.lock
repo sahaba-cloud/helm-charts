@@ -1,6 +1,0 @@
-dependencies:
-- name: apisix
-  repository: https://charts.apiseven.com
-  version: 0.10.0
-digest: sha256:9259921c367b9bcf3bf74216af846447724a253f419df309e2695e5ab30546de
-generated: "2022-06-22T14:15:22.363075+08:00"
