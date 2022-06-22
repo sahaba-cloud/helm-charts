@@ -325,6 +325,16 @@ entries:
   trade-notification-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-06-22T08:08:55.680831147Z"
+    description: A Helm chart for Kubernetes
+    digest: d2690016b8383a59f261180acb3c1f21168d353ab97fa98c50b9b5e222f2ad94
+    name: trade-notification-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/trade-notification-service-0.1.2/trade-notification-service-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-22T06:59:12.637503889Z"
     description: A Helm chart for Kubernetes
     digest: fc3e0348e04d4713a5a3060ed1298dbb1703f20c98e9fb49baba1e55480884c8
@@ -406,4 +416,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-22T08:08:46.672194278Z"
+generated: "2022-06-22T08:08:55.680881051Z"
