@@ -322,6 +322,17 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/search-service-0.1.1/search-service-0.1.1.tgz
     version: 0.1.1
+  settlement-service:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-06-23T03:41:50.410798002Z"
+    description: A Helm chart for Kubernetes
+    digest: c7ddcf197eb604cd250c0eb7a3bef507c2835bc8f9f1d213b2ae9e38fbed1e75
+    name: settlement-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/settlement-service-0.1.1/settlement-service-0.1.1.tgz
+    version: 0.1.1
   trade-notification-service:
   - apiVersion: v2
     appVersion: latest
@@ -436,4 +447,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-06-22T08:18:39.196428517Z"
+generated: "2022-06-23T03:41:50.410853201Z"
