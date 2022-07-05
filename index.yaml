@@ -232,6 +232,16 @@ entries:
   log-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-07-05T14:31:33.250849195Z"
+    description: A Helm chart for Kubernetes
+    digest: a10423b6552acbf5b49cb2139d761fa07c895896a2bbfb63b801c61ecc17500d
+    name: log-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/log-service-0.1.2/log-service-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-07-05T14:31:21.786701471Z"
     description: A Helm chart for Kubernetes
     digest: ca0950e3410aa007d3f5039f180774a96589a1fe0ee491e466c1620d8ddc2b0d
@@ -478,4 +488,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-05T14:31:21.786767471Z"
+generated: "2022-07-05T14:31:33.250931596Z"
