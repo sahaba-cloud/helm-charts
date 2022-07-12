@@ -4,11 +4,19 @@
      types: [completed]
 
  jobs:
-   on-success:
-     runs-on: ubuntu-latest
+   # for single actions runner host only!
+   on-success-dev:
+     runs-on: [self-hosted, dev]
      if: ${{ github.event.workflow_run.conclusion == 'success' }}
      steps:
-       - run: echo "pages-build-deployment workflow was a success"
+       - run: helm repo update cmdb
+
+   on-success-test:
+     runs-on: [self-hosted, test]
+     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+     steps:
+       - run: helm repo update cmdb
+
 
    on-failure:
      runs-on: ubuntu-latest
