@@ -229,6 +229,17 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/id-service-0.1.0/id-service-0.1.0.tgz
     version: 0.1.0
+  job-xxl-job:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-07-12T09:26:08.291154449Z"
+    description: A Helm chart for Kubernetes
+    digest: cf2bed48fb7db6c4c55a6c432b1bd661ccc2e7d1c3e5c27a4c736c235176a164
+    name: job-xxl-job
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/job-xxl-job-0.1.1/job-xxl-job-0.1.1.tgz
+    version: 0.1.1
   log-service:
   - apiVersion: v2
     appVersion: latest
@@ -498,4 +509,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-05T14:33:23.415476012Z"
+generated: "2022-07-12T09:26:08.291239351Z"
