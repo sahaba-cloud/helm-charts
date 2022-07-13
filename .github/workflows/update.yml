@@ -4,15 +4,17 @@
      types: [completed]
 
  jobs:
-   # for single actions runner host only!
    on-success-dev:
+     # for single actions runner host only!
      # runs-on: [self-hosted, dev]
+     runs-on: ubuntu-latest
      if: ${{ github.event.workflow_run.conclusion == 'success' }}
      steps:
        - run: echo helm repo update cmdb
 
    on-success-test:
      # runs-on: [self-hosted, test]
+     runs-on: ubuntu-latest
      if: ${{ github.event.workflow_run.conclusion == 'success' }}
      steps:
        - run: echo helm repo update cmdb
