@@ -1,0 +1,92 @@
+{{- $cmdb_resources := ternary .Values.prodResources .Values.resources (eq .Values.cmdb.runenv "production") -}}
+{{- $cmdb_autoscaling := ternary .Values.prodAutoscaling .Values.autoscaling (eq .Values.cmdb.runenv "production") -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "gateway-traefik.fullname" . }}
+  labels:
+    {{- include "gateway-traefik.labels" . | nindent 4 }}
+spec:
+{{- if not $cmdb_autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      {{- include "gateway-traefik.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "gateway-traefik.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "gateway-traefik.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- if eq .Values.cmdb.serviceLevel "S" }}
+      priorityClassName: cmdb-s
+      {{- end }}
+      {{- if eq .Values.cmdb.serviceLevel "A" }}
+      priorityClassName: cmdb-a
+      {{- end }}
+      terminationGracePeriodSeconds: 45
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sh", "-c", "sleep 10"]
+          env:
+            {{- range .Values.env }}
+            - name: {{ .name | quote }}
+              value: {{ .value | quote }}
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          livenessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            failureThreshold: 6
+          readinessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            failureThreshold: 6
+          resources:
+            {{- toYaml $cmdb_resources | nindent 12 }}
+          volumeMounts:
+
+      volumes:
+
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- if has .Values.image.platform .Values.context.platforms }}
+      nodeSelector:
+        kubernetes.io/arch: {{ .Values.image.platform }}
+      {{- end }}
+
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
