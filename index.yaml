@@ -232,6 +232,16 @@ entries:
   job-executor:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-07-13T03:17:54.294831989Z"
+    description: A Helm chart for Kubernetes
+    digest: 34b9646fe794faf036c010bee7c262ef4b93c303ddf22fe0761d9afff1bf43b5
+    name: job-executor
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/job-executor-0.1.2/job-executor-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-07-12T11:41:08.188641698Z"
     description: A Helm chart for Kubernetes
     digest: f975466799dfa0f003168fba2186d56b6aaba52afb4f4250277eb99446edb275
@@ -520,4 +530,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-12T11:41:08.188757105Z"
+generated: "2022-07-13T03:17:54.294919035Z"
