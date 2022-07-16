@@ -126,6 +126,17 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/demo-devops-arm-0.1.8/demo-devops-arm-0.1.8.tgz
     version: 0.1.8
+  fe-yunti:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-07-16T09:27:49.926776314Z"
+    description: A Helm chart for Kubernetes
+    digest: 49a4c895dd0d383a616a6640da5dd644622cf851f9a22a9b89a7924daa16b54b
+    name: fe-yunti
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/fe-yunti-0.1.2/fe-yunti-0.1.2.tgz
+    version: 0.1.2
   gateway-nginx:
   - apiVersion: v2
     appVersion: latest
@@ -541,4 +552,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-13T12:08:11.956289197Z"
+generated: "2022-07-16T09:27:49.926879816Z"
