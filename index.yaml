@@ -171,6 +171,16 @@ entries:
   gateway-traefik:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-07-19T04:25:02.043841565Z"
+    description: A Helm chart for Kubernetes
+    digest: 585b0f0c917184e0d8718ca7f496ee679bc69b51e504ce198661c178465ecfaa
+    name: gateway-traefik
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/gateway-traefik-0.1.2/gateway-traefik-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-07-13T12:08:11.956226996Z"
     description: A Helm chart for Kubernetes
     digest: 3c90d19f17f37ac08f20c02cb2d5dfb33824316a8c36aef848b99e6f71cc17ee
@@ -662,4 +672,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-19T04:24:52.189328643Z"
+generated: "2022-07-19T04:25:02.044119068Z"
