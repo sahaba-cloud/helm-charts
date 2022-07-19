@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  aws-needle:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-07-19T15:12:53.132916616Z"
+    description: A Helm chart for Kubernetes
+    digest: 0cec37b60bcc6af21f32792a6ce0ad44b2dd9d2a0bd1337a61d523acc3b5099f
+    name: aws-needle
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/aws-needle-0.1.1/aws-needle-0.1.1.tgz
+    version: 0.1.1
   cmdb-api:
   - apiVersion: v2
     appVersion: latest
@@ -872,4 +883,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-19T08:05:58.073160977Z"
+generated: "2022-07-19T15:12:53.133284032Z"
