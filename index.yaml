@@ -326,6 +326,16 @@ entries:
   log-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-07-19T04:24:41.106013147Z"
+    description: A Helm chart for Kubernetes
+    digest: 5b7ac070f219c89c148756ab1c4593976228a2a3e2c3b5fd4f602d6f79697df3
+    name: log-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/log-service-0.1.4/log-service-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-07-05T14:33:23.415401412Z"
     description: A Helm chart for Kubernetes
     digest: 3d3c5773d3b747c8ce3f55fa3aae03af832bd6bf6440b29227a24e11a5f02d27
@@ -490,6 +500,16 @@ entries:
   settlement-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-07-19T04:24:41.190079974Z"
+    description: A Helm chart for Kubernetes
+    digest: c80225d9c89fe5804a6a0548d52ce85b5d320dba8f6d66ad1faa60490eaa9c72
+    name: settlement-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/settlement-service-0.1.2/settlement-service-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-06-23T03:41:50.410798002Z"
     description: A Helm chart for Kubernetes
     digest: c7ddcf197eb604cd250c0eb7a3bef507c2835bc8f9f1d213b2ae9e38fbed1e75
@@ -632,4 +652,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-07-19T04:24:33.968649701Z"
+generated: "2022-07-19T04:24:41.190176175Z"
