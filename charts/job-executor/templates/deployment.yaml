@@ -70,13 +70,8 @@ spec:
           resources:
             {{- toYaml $cmdb_resources | nindent 12 }}
           volumeMounts:
-            - name: pvc
-              mountPath: /data/applogs/xxl-job/jobhandler
 
       volumes:
-        - name: pvc
-          persistentVolumeClaim:
-            claimName: {{ include "job-executor.fullname" . }}
 
       {{- with .Values.nodeSelector }}
       nodeSelector:
