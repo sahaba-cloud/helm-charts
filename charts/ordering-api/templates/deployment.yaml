@@ -68,14 +68,8 @@ spec:
           resources:
             {{- toYaml $cmdb_resources | nindent 12 }}
           volumeMounts:
-            - name: secret-ordering
-              mountPath: /etc/cmdb
-              readOnly: true
 
       volumes:
-        - name: secret-ordering
-          secret:
-            secretName: ordering
 
       {{- with .Values.nodeSelector }}
       nodeSelector:
