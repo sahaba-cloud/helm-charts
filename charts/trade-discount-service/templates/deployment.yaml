@@ -68,8 +68,14 @@ spec:
           resources:
             {{- toYaml $cmdb_resources | nindent 12 }}
           volumeMounts:
+            - name: secret-{{ .Chart.Name }}
+              mountPath: /etc/{{ .Chart.Name }}/
+              readOnly: true
 
       volumes:
+        - name: secret-{{ .Chart.Name }}
+          secret:
+            secretName: {{ .Chart.Name }}
 
       {{- with .Values.nodeSelector }}
       nodeSelector:
