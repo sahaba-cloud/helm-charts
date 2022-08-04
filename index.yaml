@@ -743,6 +743,16 @@ entries:
   trade-discount-service:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-08-04T11:03:15.179136205Z"
+    description: A Helm chart for Kubernetes
+    digest: 85a181855105eb4cbebbc403b6db905973b46993f58138127370927536984435
+    name: trade-discount-service
+    type: application
+    urls:
+    - https://github.com/sahaba-cloud/helm-charts/releases/download/trade-discount-service-0.1.2/trade-discount-service-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-08-04T09:30:19.323354107Z"
     description: A Helm chart for Kubernetes
     digest: 10a03c25430b0befed70d67ce1d7d4a33a27c2f48a5e958277e454e512e19f73
@@ -935,4 +945,4 @@ entries:
     urls:
     - https://github.com/sahaba-cloud/helm-charts/releases/download/wetv-gateway-0.1.1/wetv-gateway-0.1.1.tgz
     version: 0.1.1
-generated: "2022-08-04T10:23:04.893251546Z"
+generated: "2022-08-04T11:03:15.179292905Z"
